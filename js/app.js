@@ -1,7 +1,22 @@
 $(document).ready(function () {
-    $( "#allBtn" ).click(function() {
+    $("#allBtn").click(function () {
+        $("#out").html('');
+        url = "https://restcountries.eu/rest/v2/all";
+        printCountry(url)
+    });
+    $( "#cInput" ).keypress(function() {
+
+        
+  });
+    $("#searchBtn").click(function () {
+        $("#out").html('');
+        url = "https://restcountries.eu/rest/v2/name/" + $("#cInput").val();
+        printCountry(url)
+    });
+
+    let printCountry = (url) => {
         $.ajax({
-            url: "https://restcountries.eu/rest/v2/all",
+            url: url,
             type: "GET",
             success: function (response) {
                 response.forEach(function (element) {
@@ -27,14 +42,5 @@ $(document).ready(function () {
                 });
             }
         });
-    });
-
-    $( "#searchBtn" ).click(function() {
-
-    });
-
-    let printCountry = () =>{
-
     }
-
 });
