@@ -25,7 +25,7 @@ $(document).ready(function () {
             success: function (response) {
                 response.forEach(function (element) {
                     $('#out').append(
-                        `        <div class="card col-md-3 cardCss">
+                        `        <div class="card col-md-4 cardCss">
             <div class="row no-gutters">
                 <div class="col-auto">
                     <img src="${element.flag}" class="img-fluid" alt="">
@@ -45,7 +45,8 @@ $(document).ready(function () {
 `
                     )
                 });
-            }
+            },
+
         });
     }
 });
