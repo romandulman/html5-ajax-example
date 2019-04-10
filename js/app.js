@@ -32,4 +32,9 @@ $(document).ready(function () {
     $( "#searchBtn" ).click(function() {
 
     });
+
+    let printCountry = () =>{
+
+    }
+
 });
