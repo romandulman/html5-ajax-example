@@ -11,27 +11,30 @@
 <body>
 <div class="container">
     <h1 class="text-center">משימה 2 רומן דולמן 306033143</h1>
-
-<div class="inpForm">
-    <div class="card">
+    <br>
+    <div class="card inpForm">
         <div class="card-body">
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <div class="form-row">
+                <input type="text" class="form-control col-8" id="cInput" placeholder="Enter Country">
+                <div class="col-4">
+                    <button class="btn btn-info" id="searchBtn">Search</button>
+                </div>
 
-
+            </div>
+            <br>
+            <button class="btn btn-info" id="allBtn">All</button>
         </div>
     </div>
-
 </div>
+<br>
+<div class="container" >
+    <div id="out" class="row">
 
-</div>
 
 
-<div class="container" id="out">
-    <h2>Basic Card</h2>
-    <div class="card">
-        <div class="card-body">Basic card</div>
     </div>
 </div>
+
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
