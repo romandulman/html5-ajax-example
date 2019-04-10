@@ -1,16 +1,17 @@
-.inpForm{
-max-width: 400px;
-margin-left: auto;
-    margin-right: auto;
-}
-h1 {
-  font-size: 25px;
-}
-#searchBtn{
+.inpForm {
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cardCss{
+h1 {
+    font-size: 25px;
+}
 
+#searchBtn {
+    width: 100%;
+}
+
+.cardCss {
+    margin: 2px;
 }
