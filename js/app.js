@@ -4,15 +4,19 @@ $(document).ready(function () {
         url = "https://restcountries.eu/rest/v2/all";
         printCountry(url)
     });
-    $( "#cInput" ).keypress(function() {
 
-        
+    $( "#cInput" ).keypress(function() {
+        $("#out").html('');
+        url = "https://restcountries.eu/rest/v2/name/" + $("#cInput").val();
+        printCountry(url)
   });
+
     $("#searchBtn").click(function () {
         $("#out").html('');
         url = "https://restcountries.eu/rest/v2/name/" + $("#cInput").val();
         printCountry(url)
     });
+
 
     let printCountry = (url) => {
         $.ajax({
@@ -21,7 +25,7 @@ $(document).ready(function () {
             success: function (response) {
                 response.forEach(function (element) {
                     $('#out').append(
-                        `        <div class="card col-md-6">
+                        `        <div class="card col-lg-6 cardCss">
             <div class="row no-gutters">
                 <div class="col-auto">
                     <img src="${element.flag}" class="img-fluid" alt="">
@@ -31,7 +35,10 @@ $(document).ready(function () {
                         <h4 class="card-title" id="nameOut">${element.name}</h4>
                         <p class="card-text" >Top Level Domain: <span id="domainOut">${element.topLevelDomain}</span></p>
                         <p class="card-text" >Capital: <span id="capOut">${element.capital}</span></p>
-                        <p class="card-text" >Currencies: <span id="currOut">${element.currencies.code}</span></p>
+                        <p class="card-text" >Currencies: <span id="currOut">${element.currencies.forEach(function (elem) {
+                            
+                            })
+                        }</span></p>
                     </div>
                 </div>
             </div>
