@@ -33,11 +33,9 @@ $(document).ready(function () {
                 <div class="col">
                     <div class="card-block px-2">
                         <h4 class="card-title" id="nameOut">${element.name}</h4>
-                        <p class="card-text" >Top Level Domain: <span id="domainOut">${element.topLevelDomain}</span></p>
-                        <p class="card-text" >Capital: <span id="capOut">${element.capital}</span></p>
-                        <p class="card-text" >Currencies: <span id="currOut">${element.currencies.forEach(function (elem) {
-                            
-                            })
+                        <p class="card-text" ><b>Top Level Domain:</b> <span id="domainOut">${element.topLevelDomain}</span></p>
+                        <p class="card-text" ><b>Capital: </b><span id="capOut">${element.capital}</span></p>
+                        <p class="card-text" ><b>Currencies:</b> <span id="currOut">${ JSON.stringify(element.currencies[1])
                         }</span></p>
                     </div>
                 </div>
